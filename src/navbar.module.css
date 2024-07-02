@@ -1,0 +1,106 @@
+/* header css------------------ */
+.navbarcont{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.7rem 1.3rem 0.7rem 1.3rem;
+    background-color: rgb(12, 123, 170);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+}
+/* logo and name part css---------------------------- */
+.logoawrap{
+    text-decoration: none;
+    color: black;
+}
+.logocont{
+    display: flex;
+    align-items: center;
+}
+.logocont svg{
+    width: 3rem;
+    height: 3rem;
+    fill: black;
+}
+.logocont span{
+    font-weight: 900;
+    font-size: 1.7rem;
+    white-space: nowrap;
+}
+/* menu css---------------------------------- */
+.listopt{
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    list-style: none;
+}
+.listopt a{
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: black;
+    transition: 0.3s;
+}
+
+.listopt a:hover{
+    color: rgb(55, 55, 55);
+}
+
+/* btns css-------------------------------------------------------------------------------- */
+.btn1, .btn2{
+    display: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+.btn1 svg, .btn2 svg{
+    width: 2rem;
+    height: 2rem;
+    fill: black;
+}
+@media only screen and (max-width: 850px){
+    .btn1afterclick{
+        display: inline-block;
+    }
+    .btnafterclick{
+        display: none;
+    }
+    .btn2afterclick{
+        display: inline-block;
+    }
+    .listopt{
+        width: 100%;
+        flex-direction: column;
+        position: fixed;
+        top: 4.4rem;
+        left: 0;
+        gap: 0.5rem;
+        z-index: 100;
+        background-color: rgb(12, 123, 170);
+        transform: translateY(-15rem);
+    }
+    .listopt li{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        border-bottom: 2px solid rgb(59, 59, 59);
+    }
+    .afterclick{
+        animation: shownav 0.7s ease;
+        animation-fill-mode: forwards;
+    }
+
+}
+
+@keyframes shownav{
+    0%{
+        transform: translateY(-15rem);
+    }
+    100%{
+        transform: translateY(0rem);
+    }
+}

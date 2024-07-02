@@ -1,0 +1,59 @@
+.section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 3rem;
+}
+
+.section h2{
+    font-size: 2.5rem;
+    text-align: center;
+}
+.section form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 2rem;
+    width: 100%;
+}
+.input{
+    width: 13rem;
+}
+.commonstyle{
+    font-size: 1.3rem;
+    padding: 0.7em 1em 0.7em 1em;
+    border-radius: 0.4em;
+    border: none;
+    background-color: rgba(79, 170, 208, 0.522);
+    width: 100%;
+}
+.description{
+    resize: none;
+}
+.submitbtn{
+    font-size: 1.3rem;
+    padding: 0.7em 1em 0.7em 1em;
+    border-radius: 0.4em;
+    border: none;
+    background-color: rgb(12, 123, 170);
+    transition: 0.4s;
+    cursor: pointer;
+    color: white;
+}
+.submitbtn:hover{
+    background-color: rgb(18, 139, 191);
+}
+.focus:focus{
+    outline: 0.13em solid wheat;
+}
+
+@media only screen and (min-width: 550px){
+    .section form{
+        width: 550px;
+    }
+}

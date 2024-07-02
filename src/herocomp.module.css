@@ -1,0 +1,134 @@
+.section {
+  margin-top: 4.4rem;
+  display: flex;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.left h2 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  text-align: center;
+  padding: 1em 1em 0em 1em;
+}
+.left span {
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 0em 1em 1em 1em;
+}
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 4.4rem);
+  padding-left: 0rem;
+}
+.right svg {
+  width: 30vw;
+}
+.right svg path:first-child {
+  fill: transparent;
+  stroke-width: 10;
+  stroke: rgb(84, 44, 148);
+  stroke-dasharray: 1500;
+  stroke-dashoffset: 0;
+  animation: draw2 10s ease-in-out infinite;
+}
+.right svg path:nth-child(2) {
+  fill: transparent;
+  stroke-width: 10;
+  stroke: rgb(84, 44, 148);
+  stroke-dasharray: 1500;
+  stroke-dashoffset: 0;
+  animation: draw1 10s ease-in-out infinite;
+}
+@keyframes draw1 {
+  0% {
+    stroke-dashoffset: 1500;
+  }
+  40%{
+    fill: transparent;
+    stroke-dashoffset: 100;
+  }
+  50% {
+    stroke-dashoffset: 0;
+    fill: #da768e;
+  }
+  60%{
+    stroke-dashoffset: 0;
+    fill: #da768e;
+  }
+  65%{
+    fill: transparent;
+    stroke-dashoffset: 0;
+  }
+  100%{
+    stroke-dashoffset: 1500;
+  }
+}
+@keyframes draw2 {
+  0% {
+    stroke-dashoffset: 1500;
+  }
+  40%{
+    fill: transparent;
+    stroke-dashoffset: 100;
+  }
+  50% {
+    stroke-dashoffset: 0;
+    fill: #f9b65f;
+  }
+  60%{
+    stroke-dashoffset: 0;
+    fill: #f9b65f;
+  }
+  65%{
+    fill: transparent;
+    stroke-dashoffset: 0;
+  }
+  100%{
+    stroke-dashoffset: 1500;
+  }
+}
+@media only screen and (max-width: 1000px){
+    .right svg{
+        width: 40vw;
+    }
+    .left h2{
+      font-size: 3rem;
+    }
+    .left span{
+      font-size: 1.5rem;
+    }
+}
+@media only screen and (max-width: 700px) {
+  .section {
+    flex-direction: column-reverse;
+  }
+  .left,
+  .right {
+    width: 100%;
+    height: auto;
+  }
+  .right{
+    padding-bottom: 0em;
+  }
+  .left h2{
+    padding-top: 1rem;
+    font-size: 2.5rem;
+  }
+  .left span{
+    font-size: 1.3rem;
+  }
+  .right svg{
+    margin-top: 2.5rem;
+    width: 50vw;
+  }
+}
+
+

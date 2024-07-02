@@ -1,0 +1,142 @@
+.section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.section h2{
+    font-size: 2.5rem;
+    text-align: center;
+}
+.titlecont{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.3em;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    background-color: rgba(40, 143, 188, 0.712);
+}
+.titlecont button{
+    background: transparent;
+    text-align: center;
+    border: none;
+    background-color: rgb(38, 113, 170);
+    font-size: 1.3rem;
+    padding: 0.7em;
+    color: white;
+    font-weight: 500;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.titlecont button:hover{
+    opacity: 0.8;
+}
+.maincont{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.datacont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.dataul{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    list-style: none;
+    border-bottom: 2px solid rgb(86, 86, 86);
+}
+.dataul:nth-child(odd){
+    background-color: rgba(51, 168, 218, 0.249);
+}
+.left{
+    display: flex;
+}
+.left li{
+    font-size: 1.3rem;
+    padding: 0.7em 1em 0.7em 1em;
+}
+.left li:nth-child(2){
+    width: 12ch;
+}
+.left li:nth-child(3){
+    max-width: 25rem;
+}
+.right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 1em;
+    gap: 1rem;
+}
+.right li{
+    font-size: 1.3rem;
+    color: red;
+    font-family: monospace;
+    font-weight: 600;
+    white-space: nowrap;
+}
+.deletebtn{
+    background: transparent;
+    border: none;
+    background-color: rgb(208, 29, 29);
+    padding: 0.6em;
+    border-radius: 0.4em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.editbtn{
+    background: transparent;
+    border: none;
+    background-color: rgb(70, 134, 180);
+    padding: 0.6em;
+    border-radius: 0.4em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.editbtn:hover, .deletebtn:hover{
+    opacity: 0.8;
+}
+.datecont{
+    white-space: nowrap;
+}
+@media only screen and (max-width: 700px){
+    .left{
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 500px){
+    .dataul{
+        flex-direction: column;
+    }
+    .right{
+        padding-bottom: 0.7rem;
+        padding-top: 1rem;
+    }
+}
+.totalamount{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.3em;
+    gap: 1.5rem;
+    width: 100%;
+    background-color: rgba(40, 143, 188, 0.712);
+}
+.totalamount span:first-child{
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+.totalamount span:last-child{
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: rgb(190, 0, 0);
+    font-family: 'Roboto Mono', monospace;
+}
